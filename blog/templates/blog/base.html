@@ -60,17 +60,19 @@
                 {% endif %}
                 {% block content %}{% endblock %}
             </div>
-            <div class="col-md-4">
-                <div class="content-section">
-                    <h3>Our Sidebar</h3>
-                    <ul class="list-group">
-                        <li class="list-group-item list-group-item-light"><a class="text-muted" href="{% url 'blog-todo' %}">My ToDos</a></li>
-                        <li class="list-group-item list-group-item-light"><a class="text-muted" href="{% url 'todo-create' %}">Create New ToDo</a></li>
-                        <li class="list-group-item list-group-item-light"><a class="text-muted" href="{% url 'blog-todo' %}">Calendars</a></li>
-                        <li class="list-group-item list-group-item-light"><a class="text-muted" href="{% url 'blog-todo' %}">etc</a></li>
-                    </ul>
+            {% if user.is_authenticated %}
+                <div class="col-md-4">
+                    <div class="content-section">
+                        <h3>Our Sidebar</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-light"><a class="text-muted" href="{% url 'blog-todo' %}">My ToDos</a></li>
+                            <li class="list-group-item list-group-item-light"><a class="text-muted" href="{% url 'todo-create' %}">Create New ToDo</a></li>
+                            <li class="list-group-item list-group-item-light"><a class="text-muted" href="{% url 'blog-todo' %}">Calendars</a></li>
+                            <li class="list-group-item list-group-item-light"><a class="text-muted" href="{% url 'blog-todo' %}">etc</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            {% endif %}
         </div>
     </main>
 
