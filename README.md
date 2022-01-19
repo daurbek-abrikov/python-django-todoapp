@@ -2,8 +2,7 @@
 
 
 ## Title
-ToDo  app with Django+Postgresql
-```html
+ToDo  app using Django Webframework and Postgresql.
 
 ### Table of Contents
 - [Installation](#installation)
@@ -23,27 +22,23 @@ ToDo  app with Django+Postgresql
 
 * ### PostgreSQL Database [Download](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
-* ### First we need to run the server
-
+* ### To run the server
 ```python $ cd django_project```
 ```python $ python manage.py runserver```
+
 
 
 ## Usage
 After installing needed modules, just execute app.py, it will start server.
 
-By Default it will be on : http://127.0.0.1:8000/
+By Default it will start on : http://127.0.0.1:8000/
+
 
 
 ## Examples
-```html
+
  So, with this website User can register, login;
  User can see, create, update, delete Todos; 
-
-```
-
-
-
 
 
 ## License
@@ -68,3 +63,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+
