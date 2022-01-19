@@ -1,0 +1,30 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  {% if todos %}
+    <article class="media content-section">
+      <div class="media-body">
+        {% for todo in todos %}
+          <legend class="border-bottom mb-4">
+            <label for="{{ todo.id }}"><span class="complete-">{{ todo.title }}</span></label>
+            <span class="category-{{ todo.category }}">{{ todo.category }}</span>
+            <strong class="taskDate"><i class="fa fa-calendar"></i>{{ todo.date_posted }} - {{ todo.due_date }}</strong>
+            <small class="text-muted"> {{ todo.comment }} </small>
+          </legend>
+          <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'todo-update' todo.id %}">Update</a>
+          <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'todo-delete' todo.id %}">Delete</a>
+        {% endfor %}
+      </div>
+    </article>
+  {% else %}
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <h1>  You have no ToDo's!</h1> 
+        </div>
+          <h2> Then Let's create some ToDo!</h2>
+      </div>
+    </article>
+  {% endif %}
+{% endblock content %}
+
+
